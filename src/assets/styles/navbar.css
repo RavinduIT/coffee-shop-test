@@ -10,6 +10,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
   }
   
   .navbar__logo {
@@ -25,7 +26,9 @@
   .navbar__link {
     font-size: 30px;
     color: white;
+    text-decoration: none;
     cursor: pointer;
+    transition: color 0.3s ease;
   }
   
   .navbar__link:hover {

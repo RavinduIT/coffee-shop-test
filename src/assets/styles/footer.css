@@ -1,6 +1,6 @@
 .footer_content {
-  background-color: #f8f9fa;
-  display: flex;
+    background-color: #f8f9fa;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -8,6 +8,7 @@
     left: 0;
     right: 0;
 }
+
 .footer_container {
     font-size: 20px;
     padding: 20px;
@@ -24,4 +25,8 @@
     align-items: center;
     text-align: center;
     width: 100%;
+}
+
+.footer {
+    position: relative;
 }

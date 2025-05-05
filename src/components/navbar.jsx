@@ -8,11 +8,12 @@ function Navbar() {
       <img className="navbar__logo" src="/img/logo.png" alt="Logo" />
 
       <ul className="navbar__links">
-        <li className="navbar__link">HOME</li>
-        <li className="navbar__link">ABOUT US</li>
-        <li className="navbar__link">PRODUCTS</li>
-        <li className="navbar__link">CUSTORMERS</li>
+        <li><a className="navbar__link" href="#home">HOME</a></li>
+        <li><a className="navbar__link" href="#about">ABOUT US</a></li>
+        <li><a className="navbar__link" href="#product">PRODUCTS</a></li>
+        <li><a className="navbar__link" href="#customers">CUSTOMERS</a></li>
       </ul>
+
 
       <div className="navbar__icons">
         <FiShoppingCart className="navbar__icon" />
