@@ -1,0 +1,27 @@
+.footer_content {
+  background-color: #f8f9fa;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer_container {
+    font-size: 20px;
+    padding: 20px;
+    display: block;
+    align-items: left;
+    width: 30%;
+}
+
+.footer_bottom {
+    font-size: 20px;
+    background-color: #cfcbca;
+    padding: 10px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}

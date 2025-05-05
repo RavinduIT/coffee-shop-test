@@ -1,0 +1,71 @@
+body{
+    background-image: url('../../../public/img/bg.png');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.coffee_img{
+    width: auto;
+    max-width: 40%;
+    position: absolute;
+    right: 150px;
+    top: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.coffee_img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.coffee_img:active{
+    transform: scale(0.95);
+    transition: 0.5s;
+}
+
+.left_container{
+    display: block;
+    width: 40%;
+    position: absolute;
+    left: 150px;
+    top: 200px;
+}
+
+h1{
+    color: #a1856a;
+    font-size: 100px;
+    text-align: left;
+    margin-top: 200px;
+
+}
+
+.desc {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.shop_button{
+    background-color: #a1856a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.shop_button:hover{
+    background-color: #a1856a;
+    color: white;
+    transition: 0.5s;
+}

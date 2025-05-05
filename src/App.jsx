@@ -1,14 +1,15 @@
-import Navbar from "./components/navbar.jsx";
-import Home from "./components/home.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Home from "./components/Home.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
-    <div className="App">
-      
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Navbar />
-      <Home />
-
-      
+      <div style={{ flex: 1 }}>
+        <Home />
+      </div>
+      <Footer />
     </div>
   );
 }
