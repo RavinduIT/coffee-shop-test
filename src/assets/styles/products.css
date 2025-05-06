@@ -1,0 +1,134 @@
+.products_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+.products_container .products {
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #f5f5f5;
+}
+
+.products {
+    width: 100%;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 25%;
+    margin: 50px 80px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.add_to_cart {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: solid 5px #a1856a;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+    margin: 1em 0;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    width: 80%;
+    max-width: 250px;
+}
+
+.add_to_cart:hover {
+    background-color: #8f7a5a;
+    color: #ffffff;
+}
+
+.products_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.product_img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    background-color: #f5f5f5;
+}
+
+.price_and_cart_container {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background-color: #fffefe;
+    border-radius: 0 0 10px 10px;
+}
+
+.price_container p {
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #a1856a;
+    border-radius: 5px;
+    padding: 10px 50px;
+}
+
+.price_container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cart_container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product h2 {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .add_to_cart {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .price_container p {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .products_container {
+        font-size: 30px;
+    }
+}

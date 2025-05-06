@@ -10,8 +10,8 @@ function Navbar() {
       <ul className="navbar__links">
         <li><a className="navbar__link" href="#home">HOME</a></li>
         <li><a className="navbar__link" href="#about">ABOUT US</a></li>
-        <li><a className="navbar__link" href="#product">PRODUCTS</a></li>
-        <li><a className="navbar__link" href="#customers">CUSTOMERS</a></li>
+        <li><a className="navbar__link" href="#products">PRODUCTS</a></li>
+        <li><a className="navbar__link" href="#customer">CUSTOMERS</a></li>
       </ul>
 
 

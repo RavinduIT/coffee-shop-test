@@ -31,15 +31,14 @@
 }
 
 .about_text{
-    font-size: 20px;
+    font-size: 25px;
     color: #333;
     line-height: 1.5;
     text-align: left;
 }
 .about_text h1{
     padding-top: 0%;
-    font-size: 40px;    
-    font-size: 30px;
+    font-size: 50px;   
     color: #333;
     margin-bottom: 20px;
 }
@@ -52,9 +51,38 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 50px;
     cursor: pointer;
     border-radius: 15px;
     transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    .about{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .about_img_container{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .about_container{
+        width: 100%;
+    }
+    .about_img{
+        width: 100%;
+        height: auto;
+    }
+    .about_text h1{
+        font-size: 30px;   
+    }
+    .about_text{
+        font-size: 20px;
+    }
+    .about_button {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
 }

@@ -1,42 +1,32 @@
-
-.coffee_img {
-    width: auto;
-    max-width: 40%;
-    position: absolute;
-    right: 150px;
-    top: 100px;
-    height: auto;
-}
-
-.coffee_img:hover {
-    transform: scale(1.05);
-    transition: 0.5s;
-}
-
-.coffee_img:active {
-    transform: scale(0.95);
-    transition: 0.5s;
+.home_container {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../../../public/img/bg.png');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
 }
 
 .left_container {
-    display: block;
-    width: 40%;
-    position: absolute;
-    left: 150px;
-    top: 200px;
+    width: 50%;
 }
 
 .headline {
     color: #a1856a;
-    font-size: 100px;
+    font-size: 3.5vw;
     text-align: left;
-    margin-top: 200px;
-
+    margin-top: 0;
 }
 
 .desc {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 1.2vw;
     text-align: left;
     margin-top: 20px;
 }
@@ -47,9 +37,7 @@
     border: none;
     padding: 15px 30px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
+    font-size: 1.2vw;
     margin-top: 50px;
     cursor: pointer;
     border-radius: 15px;
@@ -57,18 +45,52 @@
 }
 
 .shop_button:hover {
-    background-color: #a1856a;
+    background-color: #8f6f53;
     color: white;
+}
+
+.coffee_img {
+    max-width: 40%;
+    height: auto;
     transition: 0.5s;
 }
 
-.home_container {
-    position: relative;
-    padding: 40px;
-    height: 100vh;
-    background-image: url('../../../public/img/bg.png');
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+.coffee_img:hover {
+    transform: scale(1.05);
+}
+
+.coffee_img:active {
+    transform: scale(0.95);
+}
+
+/* Responsive tweaks for mobile screens */
+@media (max-width: 768px) {
+    .home_container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .left_container {
+        width: 100%;
+    }
+
+    .coffee_img {
+        max-width: 80%;
+        margin-top: 30px;
+        position: static;
+    }
+
+    .headline {
+        font-size: 8vw;
+    }
+
+    .desc {
+        font-size: 4vw;
+    }
+
+    .shop_button {
+        font-size: 4vw;
+        width: 80%;
+    }
 }
