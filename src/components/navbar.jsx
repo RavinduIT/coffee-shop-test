@@ -2,6 +2,17 @@ import "../assets/styles/navbar.css";
 import { FaSearch } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 
+function search() {
+  console.log("Search clicked");
+  return (
+    <div className="search-bar">
+      <input type="text" placeholder="Search..." className="search-input" />
+      <button className="search-button" onClick={search}>Search</button>
+      
+    </div>
+  )
+}
+
 function Navbar() {
   return (
     <nav className="navbar">
@@ -17,7 +28,7 @@ function Navbar() {
 
       <div className="navbar__icons">
         <FiShoppingCart className="navbar__icon" />
-        <FaSearch className="navbar__icon" />
+        <FaSearch className="navbar__icon" onClick={search}/>
       </div>
     </nav>
   );

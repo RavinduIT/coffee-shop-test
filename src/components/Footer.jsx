@@ -5,14 +5,14 @@ function Footer() {
     <div className="footer">
         <div className="footer_content">
             <div className = "footer_container">
-                <h2>About Us</h2>
+                <a href = "#about">About Us</a>
                 <p>We are a company dedicated to providing the best products and services to our customers.</p>
             </div>
             <div className = "footer_container">
                 <h2>Contact Us</h2>
-                <p>1234 Street Name, City, State, 12345</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Email:   </p>
+                <p>No91, Galle Road, Matara.</p>
+                <p>Phone: +94 76 546 6894</p>
+                <p>Email:  rav.coffeeshop@gmail.com  </p>
             </div>
             <div className = "footer_container">
                 <h2>Follow Us</h2>
