@@ -3,28 +3,28 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
     align-items: stretch;
-    gap: 50px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    gap: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .customer_review{
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px 0;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 8px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 25%;
     height: auto;
     text-align: center;
-    font-size: 18px;
-    border-radius: 20px;
+    font-size: 14px;
+    border-radius: 15px;
     transition: 0.5s;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 10px 0;
+    padding: 15px;
+    margin: 8px 0;
 }
 
 .customer_review:hover{
@@ -33,21 +33,21 @@
 }
 
 .customer_review h2{
-    font-size: 24px;
+    font-size: 1.3rem;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .customer_review img{
-    width: 10em;
-    height: 10em;
+    width: 8em;
+    height: 8em;
     object-fit: cover;
     border-radius: 100%;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .customer_review p{
-    font-size: 18px;
+    font-size: 14px;
     color: #333;
     line-height: 1.5;
     text-align: center;
@@ -55,15 +55,15 @@
 
 .customer_content{
     background-color: #f9f9f9;
-    padding: 80px;
+    padding: 50px;
 }
 
 .customer_content h1{
-    margin-top: 100px;  
+    margin-top: 60px;  
     text-align: center;
     padding-top: 0%;
-    font-size: 50px;   
-    margin-bottom: 20px;
+    font-size: 2.5rem;   
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 768px) {
@@ -75,10 +75,21 @@
         width: 80%;
     }
     .customer_review img{
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        width: 6em;
+        height: 6em;
     }
     .customer_review p{
-        font-size: 16px;
+        font-size: 12px;
     }
-    
+    .customer_review h2{
+        font-size: 1.1rem;
+    }
+    .customer_content h1{
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+    .customer_content{
+        padding: 30px;
+    }
 }
