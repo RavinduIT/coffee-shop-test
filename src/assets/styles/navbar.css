@@ -1,6 +1,7 @@
 body{
   font-family: 'Brush Script MT', cursive;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -14,41 +15,115 @@ body{
     left: 0;
     right: 0;
     z-index: 1000;
-  }
+    flex-wrap: wrap;
+}
   
-  .navbar__logo {
+.navbar__logo {
     height: 100px;
-  }
+}
   
-  .navbar__links {
+.navbar__links {
     display: flex;
     gap: 30px;
     list-style: none;
-  }
+}
   
-  .navbar__link {
+.navbar__link {
     font-size: 30px;
     color: white;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s ease;
-  }
+}
   
-  .navbar__link:hover {
+.navbar__link:hover {
     color: #ff6347;
-  }
+}
   
-  .navbar__icons {
+.navbar__icons {
     display: flex;
     gap: 30px;
-  }
+}
   
-  .navbar__icon {
+.navbar__icon {
     font-size: 30px;
     cursor: pointer;
-  }
+    transition: color 0.3s ease;
+}
   
-  .navbar__icon:hover {
+.navbar__icon:hover {
     color: #ff6347;
-  }
-  
+}
+
+.search-bar {
+    position: absolute;
+    top: 100%;
+    right: 150px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 10px;
+    z-index: 1001;
+}
+
+.search-input {
+    padding: 10px;
+    border: 2px solid #a1856a;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #ff6347;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #a1856a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #8f6f53;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+        height: auto;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    
+    .navbar__links {
+        gap: 15px;
+        margin: 10px 0;
+    }
+    
+    .navbar__link {
+        font-size: 20px;
+    }
+    
+    .navbar__icon {
+        font-size: 24px;
+    }
+    
+    .search-bar {
+        position: relative;
+        right: auto;
+        margin-top: 10px;
+    }
+    
+    .search-input {
+        width: 150px;
+    }
+}

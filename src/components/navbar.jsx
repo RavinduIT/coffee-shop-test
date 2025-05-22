@@ -1,19 +1,35 @@
 import "../assets/styles/navbar.css";
 import { FaSearch } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
-
-function search() {
-  console.log("Search clicked");
-  return (
-    <div className="search-bar">
-      <input type="text" placeholder="Search..." className="search-input" />
-      <button className="search-button" onClick={search}>Search</button>
-      
-    </div>
-  )
-}
+import { useState } from "react";
 
 function Navbar() {
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = () => {
+    if (searchTerm.trim()) {
+      // Scroll to products section and highlight matching items
+      const productsSection = document.getElementById('products');
+      if (productsSection) {
+        productsSection.scrollIntoView({ behavior: 'smooth' });
+        // You could add search highlighting logic here
+        alert(`Searching for: ${searchTerm}`);
+      }
+    } else {
+      setShowSearch(!showSearch);
+    }
+  };
+
+  const handleCart = () => {
+    // Open WhatsApp to discuss order
+    const phoneNumber = "94701234567";
+    const message = "Hi! I'd like to place an order from your coffee shop menu.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <nav className="navbar">
       <img className="navbar__logo" src="/img/logo.png" alt="Logo" />
@@ -25,11 +41,24 @@ function Navbar() {
         <li><a className="navbar__link" href="#customer">CUSTOMERS</a></li>
       </ul>
 
-
       <div className="navbar__icons">
-        <FiShoppingCart className="navbar__icon" />
-        <FaSearch className="navbar__icon" onClick={search}/>
+        <FiShoppingCart className="navbar__icon" onClick={handleCart} title="View Cart" />
+        <FaSearch className="navbar__icon" onClick={handleSearch} title="Search Products" />
       </div>
+
+      {showSearch && (
+        <div className="search-bar">
+          <input 
+            type="text" 
+            placeholder="Search products..." 
+            className="search-input"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+          />
+          <button className="search-button" onClick={handleSearch}>Search</button>
+        </div>
+      )}
     </nav>
   );
 }

@@ -1,6 +1,16 @@
 import "../assets/styles/about.css";
 
 function About() {
+    
+    const handleLearnMore = () => {
+        // Open email to learn more about the coffee shop
+        const email = "coffeeshop@gmail.com";
+        const subject = "I'd like to learn more about Rav's Coffee Shop";
+        const body = "Hi,\n\nI visited your website and would like to learn more about your coffee shop, history, and offerings.\n\nThank you!";
+        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+    };
+
     return (
         <div className="about" id="about">
             <div className="about_img_container">
@@ -17,7 +27,7 @@ function About() {
                         Our team of skilled baristas is dedicated to perfecting the art of coffee-making, ensuring that each visit to Rav's Coffee Shop is a delightful experience. We invite you to join us on this journey and discover the magic of our coffee, one cup at a time.
                     </p>
                 </div>
-                <button className="about_button">Learn More</button>
+                <button className="about_button" onClick={handleLearnMore}>Learn More</button>
             </div>
         </div>
     );

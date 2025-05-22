@@ -32,9 +32,17 @@ const products = [{
     image: "/img/p6.png",
 }];
 
-
-
 function Products() {
+    
+    const handleOrder = (productName, productPrice) => {
+        const phoneNumber = "94701234567"; // WhatsApp number without + sign
+        const message = `${productName} (Rs. ${productPrice}) - is this available?`;
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+    };
 
     return (
         <div className="products" id="products">
@@ -48,10 +56,15 @@ function Products() {
                         <h2>{product.name}</h2>
                         <div className="price_and_cart_container">
                             <div className="price_container">
-                            <p>Rs. {product.price}</p>
+                                <p>Rs. {product.price}</p>
                             </div>
                             <div className="cart_container">
-                                <button className="add_to_cart">Add To Cart</button>
+                                <button 
+                                    className="add_to_cart"
+                                    onClick={() => handleOrder(product.name, product.price)}
+                                >
+                                    Order via WhatsApp
+                                </button>
                             </div>
                         </div>
                     </div>

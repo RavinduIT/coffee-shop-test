@@ -1,6 +1,15 @@
 import "../assets/styles/home.css";
 
 function Home() {
+  
+  const handleShopNow = () => {
+    // Scroll to products section
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="home_container" id="home">
       <div className="left_container">
@@ -14,10 +23,9 @@ function Home() {
           Whether you're here for a quick espresso on the go or looking for a cozy corner to relax and unwind,
           our welcoming space is the perfect place to escape the hustle and bustle of everyday life.
         </p>
-        <button className="shop_button">Shop Now</button>
+        <button className="shop_button" onClick={handleShopNow}>Shop Now</button>
       </div>
       <img src="/img/main.png" alt="coffee" className="coffee_img"></img>
-
     </div>
   );
 }
