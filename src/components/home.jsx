@@ -3,7 +3,6 @@ import "../assets/styles/home.css";
 function Home() {
   
   const handleShopNow = () => {
-    // Scroll to products section
     const productsSection = document.getElementById('products');
     if (productsSection) {
       productsSection.scrollIntoView({ behavior: 'smooth' });

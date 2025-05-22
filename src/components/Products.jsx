@@ -35,12 +35,11 @@ const products = [{
 function Products() {
     
     const handleOrder = (productName, productPrice) => {
-        const phoneNumber = "94701234567"; // WhatsApp number without + sign
+        const phoneNumber = "+94701234567"; 
         const message = `${productName} (Rs. ${productPrice}) - is this available?`;
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
         
-        // Open WhatsApp in a new tab
         window.open(whatsappUrl, '_blank');
     };
 

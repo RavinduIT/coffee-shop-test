@@ -7,7 +7,6 @@ function Footer() {
 
   const handleSubscribe = () => {
     if (email.trim() && email.includes('@')) {
-      // Send subscription email
       const subject = "Newsletter Subscription - Rav's Coffee Shop";
       const body = `Hi,\n\nI would like to subscribe to your newsletter.\n\nMy email: ${email}\n\nThank you!`;
       const mailtoLink = `mailto:coffeeshop@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -20,7 +19,7 @@ function Footer() {
   };
 
   const handleSocialClick = (platform) => {
-    const phoneNumber = "94701234567";
+    const phoneNumber = "+94701234567";
     let message = "";
     
     switch(platform) {

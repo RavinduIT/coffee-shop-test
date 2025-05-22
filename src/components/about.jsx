@@ -3,7 +3,6 @@ import "../assets/styles/about.css";
 function About() {
     
     const handleLearnMore = () => {
-        // Open email to learn more about the coffee shop
         const email = "coffeeshop@gmail.com";
         const subject = "I'd like to learn more about Rav's Coffee Shop";
         const body = "Hi,\n\nI visited your website and would like to learn more about your coffee shop, history, and offerings.\n\nThank you!";

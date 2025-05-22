@@ -9,11 +9,9 @@ function Navbar() {
 
   const handleSearch = () => {
     if (searchTerm.trim()) {
-      // Scroll to products section and highlight matching items
       const productsSection = document.getElementById('products');
       if (productsSection) {
         productsSection.scrollIntoView({ behavior: 'smooth' });
-        // You could add search highlighting logic here
         alert(`Searching for: ${searchTerm}`);
       }
     } else {
@@ -22,8 +20,7 @@ function Navbar() {
   };
 
   const handleCart = () => {
-    // Open WhatsApp to discuss order
-    const phoneNumber = "94701234567";
+    const phoneNumber = "+94701234567";
     const message = "Hi! I'd like to place an order from your coffee shop menu.";
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
